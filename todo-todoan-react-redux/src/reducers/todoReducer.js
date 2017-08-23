@@ -1,9 +1,8 @@
 const initialState = {
-  task: ['jalan', 'kaki', 'makan'],
-  count: 0
+  task: ['jalan', 'kaki', 'makan']
 }
 
-export default (state=initialState, actions) => {
+export default (state = initialState, actions) => {
   switch (actions.type) {
     case 'ADD_TASK':
       const newTask = {...state, task: state.task.concat(actions.payload.task)}

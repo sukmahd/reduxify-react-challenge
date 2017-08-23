@@ -7,20 +7,17 @@ import './App.css';
 import store from './stores'
 import ListTask from './components/ListTask'
 import AddTodo from './components/AddTodo'
+import Counter from './components/Counter'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      count: store.getState().count
+      count: store.getState().counter
     }
   }
 
   render() {
-    store.subscribe(() => {
-      this.setState(store.getState())
-    })
-
     return (
       <Provider store={store}>
         <div className="App">
@@ -28,6 +25,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React Todo Use Redux</h2>
           </div>
+          <Counter/>
           <hr/>
           <div className='container'>
             <ListTask/>

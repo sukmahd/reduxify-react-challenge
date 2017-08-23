@@ -28,8 +28,8 @@ class AddTodo extends Component {
     return (
       <div className="row justify-content-md-center">
         <form className="form-inline">
-          <div class="form-group mx-sm-3">
-            <input type="text" class="form-control"  value={this.state.value} onChange={this.handleChange} placeholder="New Task"/>
+          <div className="form-group mx-sm-3">
+            <input type="text" className="form-control"  value={this.state.value} onChange={this.handleChange} placeholder="New Task"/>
           </div>
           <button className="btn btn-info btn-sm" type="button" onClick={() => {this.addTask()}}>Tambah Task</button>
       </form>

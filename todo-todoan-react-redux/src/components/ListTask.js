@@ -25,7 +25,7 @@ function ListTask(props){
 
 const mapStateToProps = (state) => {
   return {
-    kerjaan: state.task
+    kerjaan: state.todoStore.task
   }
 }
 
